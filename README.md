@@ -19,8 +19,8 @@ cp start.elf start.elf_backup && \
 Some initial analysis was done by [q3k](https://news.ycombinator.com/user?id=q3k)
 on [Hacker News](https://news.ycombinator.com/item?id=16383368):
 
-```
-[...]
-it seems to patch a licensing function at 0xEC95FD4 [1] to always return 1, by patching the jump at 0xEC95FE2 (that should be only taken for the always-allowed H263 codec) to always be taken, thus always allowing all codecs.
-```
+>Yes, it seems to patch a licensing function at 0xEC95FD4 [1] to always return 1,
+>by patching the jump at 0xEC95FE2 (that should be only taken for the always-allowed H263 codec)
+>to always be taken, thus always allowing all codecs.
+
 ![Mirrored from https://q3k.org/u/8e3173aef341df726e4f38f30e58417239423250f3e44f5b8b79acdc451d1553.png](assets/patch.png)
