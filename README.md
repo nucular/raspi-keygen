@@ -1,7 +1,7 @@
 # raspi-keygen
 
 This is an effort to reverse-engineer the Raspberry Pi license key check for
-MPEG-2 and VP1 hardware video encoding.
+MPEG-2 and VC-1 hardware video encoding.
 
 ## Patch
 
@@ -70,7 +70,7 @@ not_MPG2:				; CODE XREF: is_licensed+68j
 		addcmpbeq r2, 0, 0, deny
 ```
 
-Here, two memory locations (`0xEE86680` for MPEG-2 and `0xEE869E0` for VP1)
+Here, two memory locations (`0xEE86680` for MPEG-2 and `0xEE869E0` for VC-1)
 that point to the `.bss` segment are checked to determine the return value of
 `is_licensed`. There are no other obvious references to these locations in
 `start.elf`, so memory-breakpoint debugging (**TBD**) is probably needed.
