@@ -17,6 +17,14 @@ cp start.elf start.elf_backup && \
  perl -pne 's/\x47\xE9362H\x3C\x18/\x47\xE9362H\x3C\x1F/g' < start.elf_backup > start.elf
 ```
 
+There seem to be different `start.elf` variants. A modified patch was posted [here](https://www.reddit.com/r/raspberry_pi/comments/8sg0a6/patch_for_mpeg2_vc1_license_again_for_osmc/) a year later:
+
+```bash
+cd /boot
+cp start.elf start.elf_backup && \
+ perl -pne 's/\x47\xE9362H\x1D\x18/\x47\xE9362H\x1D\x1F/g' < start.elf_backup > start.elf
+ ```
+
 Applying it to a
 [4.14.44 `start.elf`](https://github.com/raspberrypi/firmware/blob/a154f2136850dba827cf4bc40794854376902cbd/boot/start.elf)
 (latest as of time of writing) results in the following diff:
