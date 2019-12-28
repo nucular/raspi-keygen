@@ -5,7 +5,7 @@ MPEG-2 and VC-1 hardware video encoding.
 
 ## Patch
 
-A patch for `start.elf`, a firmwware blob for the VideoCore IV processor used by
+A patch for `start.elf`, a firmware blob for the VideoCore IV processor used by
 all Raspberry Pi models, was posted to 
 [reddit](https://www.reddit.com/r/raspberry_pi/comments/5x7xbo/patch_for_mpeg2_vc1_license/)
 by [/u/fuck_the_mpeg_la](https://www.reddit.com/user/fuck_the_mpeg_la)
