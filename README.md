@@ -74,3 +74,9 @@ Here, two memory locations (`0xEE86680` for MPEG-2 and `0xEE869E0` for VC-1)
 that point to the `.bss` segment are checked to determine the return value of
 `is_licensed`. There are no other obvious references to these locations in
 `start.elf`, so memory-breakpoint debugging (**TBD**) is probably needed.
+
+in /boot/start.elf and /boot/start_x.elf
+search for 47E933363248
+after this hex string:
+if you have 3C18 replace 18 with 1F
+if you have 1D18 replace 18 with 1F
