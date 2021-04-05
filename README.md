@@ -75,8 +75,7 @@ that point to the `.bss` segment are checked to determine the return value of
 `is_licensed`. There are no other obvious references to these locations in
 `start.elf`, so memory-breakpoint debugging (**TBD**) is probably needed.
 
--
-How to patch the latest version of start.elf?<br>
+## How to patch the latest version of start.elf?<br>
 in /boot/start.elf and /boot/start_x.elf<br>
 search for 47E933363248<br>
 after this hex string:<br>
