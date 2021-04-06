@@ -3,7 +3,14 @@
 This is an effort to reverse-engineer the Raspberry Pi license key check for
 MPEG-2 and VC-1 hardware video encoding.
 
-## Patch
+## How to patch the latest version of start.elf?<br>
+in /boot/start.elf and /boot/start_x.elf<br>
+search for 47E933363248<br>
+after this hex string:<br>
+if you have 3C18 replace 18 with 1F<br>
+if you have 1D18 replace 18 with 1F<br>
+
+## Old Patch
 
 A patch for `start.elf`, a firmwware blob for the VideoCore IV processor used by
 all Raspberry Pi models, was posted to 
@@ -74,10 +81,3 @@ Here, two memory locations (`0xEE86680` for MPEG-2 and `0xEE869E0` for VC-1)
 that point to the `.bss` segment are checked to determine the return value of
 `is_licensed`. There are no other obvious references to these locations in
 `start.elf`, so memory-breakpoint debugging (**TBD**) is probably needed.
-
-## How to patch the latest version of start.elf?<br>
-in /boot/start.elf and /boot/start_x.elf<br>
-search for 47E933363248<br>
-after this hex string:<br>
-if you have 3C18 replace 18 with 1F<br>
-if you have 1D18 replace 18 with 1F<br>
