@@ -5,6 +5,14 @@ MPEG-2 and VC-1 hardware video encoding.
 
 ## How to patch the latest version of start.elf?<br>
 in /boot/start.elf and /boot/start_x.elf<br>
+
+## NEW 2021 Patch
+search for 47E934363248<br>
+after this hex string:<br>
+if you have 3C18 replace 18 with 1F<br>
+if you have 1D18 replace 18 with 1F<br>
+
+## Old 2020 Patch
 search for 47E933363248<br>
 after this hex string:<br>
 if you have 3C18 replace 18 with 1F<br>
